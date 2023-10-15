@@ -24,11 +24,7 @@ S = "${WORKDIR}/linux-${PV}"
 KRELEASE = "${@d.getVar('PV', True).split('.')[0]}"
 
 SRC_URI = "https://www.kernel.org/pub/linux/kernel/v${KRELEASE}.x/linux-${PV}.tar.xz \
-	file://0001-dts-orange-pi-zero-Add-wifi-support.patch \
-	file://0002-dts-nanopi-neo-air-add-camera.patch \
-	file://0003-dts-allwinner-bananapi-m2-zreo-Enforce-consistent-MM.patch \
-	file://0004-dts-allwinner-bananapi-m64-Consistent-nodes-for-mmc-devices.patch \
-	file://defconfig \
+file://defconfig \
 "
 
 SRC_URI:append:use-mailine-graphics = " file://drm.cfg"
