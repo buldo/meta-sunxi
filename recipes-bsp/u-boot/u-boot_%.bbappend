@@ -17,6 +17,7 @@ SRC_URI:append:sunxi = " \
 	file://0003-sunxi-H6-Enable-Ethernet-on-Orange-Pi-One-Plus.patch \
         file://boot.cmd \
 "
+UBOOT_EXTLINUX_KERNEL_ARGS:append:sunxi = " cma=256MB sunxi_no_mali_mem_reserve sunxi_fb_mem_reserve=64"
 
 UBOOT_ENV_SUFFIX:sunxi = "scr"
 UBOOT_ENV:sunxi = "boot"
